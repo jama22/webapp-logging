@@ -1,7 +1,17 @@
 # webapp-logging
 Basic Web app and logs
 
-## Deploying the web app
+
+## Web app
+
+### Local dev
+`python3 ./webapp/main.py`
+
+### Local container
+`pack build webapp --path ./webapp --builder gcr.io/buildpacks/builder:google-22`
+`docker run --rm -p 8080:8080 webapp`
+
+### Deploy to Cloud Run
 gcloud run deploy weblogging --soruce ./webapps
 
 ## Deploy the function
